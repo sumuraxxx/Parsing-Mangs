@@ -4,4 +4,5 @@
 -lxml
 -bs4
 -PIL
+-fake-useragent
  
