@@ -72,7 +72,7 @@ async def get_link_for_download_photo(session, href):
 
 async def main():
     manges = await get_manges()
-    with open("../manges.txt", "w", encoding="UTF-8") as file:
+    with open("manges.txt", "w", encoding="UTF-8") as file:
         for key, value in manges.items():
             file.write(f"{key}: {value}\n")
 
@@ -81,12 +81,12 @@ async def main():
         results = await asyncio.gather(*tasks)
         links, urls = zip(*results)
 
-        with open("../links1.txt", "w") as file:
+        with open("/links2.txt", "w") as file:
             for link_list in links:
                 for i in link_list:
                     file.write(f"{i}\n")
 
-        with open("../urls1.txt", "w") as file:
+        with open("/urls2.txt", "w") as file:
             for url_list in urls:
                 for i in url_list:
                     file.write(f"{i}\n")

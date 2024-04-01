@@ -71,7 +71,7 @@ async def download_photo(link, url, task_num):
 
 
 async def main():
-    urls, links = get_links_and_urls_and_ids(int(input()))
+    urls, links = get_links_and_urls_and_ids(int(input("number of parsing file: ")))
 
     tasks = [download_photo(link, url, task_num) for task_num, (link, url) in enumerate(zip(links, urls), 1)]
 
